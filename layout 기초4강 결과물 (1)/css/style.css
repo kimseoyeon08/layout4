@@ -1,0 +1,42 @@
+@초@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Sans+KR&display=swap&subset=korean');
+
+/*reset*/
+*{margin:0; padding: 0;}
+a {color:inherit; text-decoration: none;}
+li {list-style: none;}
+
+
+/*layout*/
+body {font-size: 16px; color:#444;font-family: 'Noto Sans KR',sans-serif; }
+.wrap {width: 100%;}
+.photoGallery {width: 100%; padding-top: 100px;}
+.photoGallery .titleBox { position: relative; margin-bottom: 200px; text-align: center}
+.photoGallery .titleBox h3{font-size: 28px; font-family: 'Nanum Myeongjo', serif;animation-name: slid-up; animation-duration: 0.8s; margin-bottom: 10px;}
+@keyframes slid-up {
+    0%{ opacity: 0;}
+    30%{ opacity: 0;  transform: translateY(20px);}
+}
+.photoGallery .titleBox p {animation-name: slid-up; animation-duration: 1s; }
+.photoGallery .titleBox .btn{animation-name: slid-up; animation-duration: 1.1s;  font-family: 'Nanum Myeongjo', serif; display: block; margin: 20px auto 0; text-align: center;font-size: 17px; width: 200px; font-weight: bold; padding: 8px 12px; color:#444; border:1px solid #ddd; border-radius: 50px; position: relative;overflow: hidden;z-index: 1}
+.photoGallery .titleBox .btn:after {content: ''; width: 0; height: 100%; background: #ff8342;
+    position: absolute; left: 0; top:0; z-index: -1; transition: all 0.5s;}
+.photoGallery .titleBox .btn:hover:after {width: 100%;}
+.photoGallery ul {width: 1280px; margin: 0 auto; padding: 0 50px; overflow: hidden; }
+.photoGallery ul li {animation-name: slid-up; animation-duration: 1.1s; float: left; width: 31.3333%; margin-right: 3%; margin-bottom: 50px; }
+
+.photoGallery ul li a{display: block; width: 100%; height: 100%; z-index: -1;}
+.photoGallery ul li a:hover {transform: translateY(-20px);
+    transition: all 0.4s;}
+.photoGallery ul li a:hover p.img img {opacity: 0.8; transition: all 0.3s;}
+.photoGallery ul li:nth-child(1), .photoGallery ul li:nth-child(4) {margin-top: 100px;}
+.photoGallery ul li:nth-child(3),.photoGallery ul li:nth-child(6) {margin-right: 0; margin-top: 100px;}
+
+.photoGallery ul li a{display: block; width: 100%; height: 100%; transition: all 0.3s;}
+.photoGallery ul li a p.img{width: 100%;}
+.photoGallery ul li a p.img img {width: 100%;}
+.photoGallery ul li a h3 {margin-top: 50px; padding-left: 35px; position: relative; position: relative;}
+.photoGallery ul li a h3:after{content: '\f178'; font-family: fontAwesome; font-size: 15px;display: block; width: 30px; height: 30px; line-height: 30px; border-radius: 50%; background: #ff8342;  position: absolute; left: 0; top:0;  z-index: -100;}
+.photoGallery ul li a .inner {padding-left: 30px;}
+.photoGallery ul li a p {line-height: 1.5;  }
+.photoGallery ul li a p.date {font-size: 14px;color:#888;}
